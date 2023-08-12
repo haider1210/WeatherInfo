@@ -31,6 +31,7 @@ async function checkWeather(city) {
         document.querySelector(".max_temp").innerHTML =Math.round(data.main.temp_max) + '°C';
         document.querySelector(".min_temp").innerHTML = Math.round(data.main.temp_min) + '°C';
 
+      
         const weatherIcon = document.querySelector(".weather-icon");
 
         switch (data.weather[0].main) {
@@ -58,6 +59,15 @@ async function checkWeather(city) {
         }
     } catch (error) {
         document.querySelector(".city").innerHTML = "Undefined City";
+        
+        document.querySelector(".temp").innerHTML = "__" + '°C';
+        document.querySelector(".humidity").innerHTML = "__" + "%";
+        document.querySelector(".wind").innerHTML = "__"+ "km/h";
+
+        document.querySelector(".pressure").innerHTML ="__"+ "Hg";
+        document.querySelector(".visibility").innerHTML = "___"
+        document.querySelector(".max_temp").innerHTML ="__" + '°C';
+        document.querySelector(".min_temp").innerHTML = "__"+ '°C';
         console.error("An error occurred:", error);
         
     }
