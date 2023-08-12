@@ -19,11 +19,17 @@ async function checkWeather(city) {
         }
         
         const data = await response.json();
+        console.log(data);
         
         document.querySelector(".city").innerHTML = data.name;
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + '°C';
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+
+        document.querySelector(".pressure").innerHTML = Math.round(data.main.pressure*0.02953)+ "Hg";
+        document.querySelector(".visibility").innerHTML = data.visibility;
+        document.querySelector(".max_temp").innerHTML =Math.round(data.main.temp_max) + '°C';
+        document.querySelector(".min_temp").innerHTML = Math.round(data.main.temp_min) + '°C';
 
         const weatherIcon = document.querySelector(".weather-icon");
 
@@ -51,7 +57,9 @@ async function checkWeather(city) {
                 break;
         }
     } catch (error) {
+        document.querySelector(".city").innerHTML = "Undefined City";
         console.error("An error occurred:", error);
+        
     }
 }
 
