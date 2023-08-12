@@ -7,6 +7,8 @@
 
 body {
     background: linear-gradient(135deg, #a590d7, #88edae);
+    margin-left: 100px;;
+   
 }
 
 h1 {
@@ -14,21 +16,83 @@ h1 {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    color: #000000;
+    padding: 20px 0;
+    font-size: 40px;
+}
+h2 {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
     color: #ffffff;
     padding: 20px 0;
+    font-size: 35px;
+    margin:-15px auto;
+    margin-top:-25px;
 }
 
 .card {
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(135deg, #d57e99, #4129df);
-    margin: 0 auto;
-    padding: 20px 35px;
+    background: linear-gradient(135deg, #eb3993, #0a28b5); 
+    margin: 20px 40px;
+    padding: 28px 35px 0;
     text-align: center;
     border-radius: 4%;
-    margin-bottom: 50px;
+  
     position: relative;
-    box-shadow: 0 8px 18px rgba(2, 2, 2, 0.6);
+    box-shadow: 0 8px 18px rgb(26 17 17 / 97%);
+    float:left;
+    transition: transform 0.5s, box-shadow 0.5s;
+    
+}
+.card:hover {
+    transform: translateY(-10px) translateZ(30px) scale(1.05);
+    box-shadow: 0 16px 32px rgb(26 17 17 / 80%);
+}
+
+/* card2 style */
+.card2{
+    width: 190px;
+    height:230px;
+    max-width: 200px;
+    min-width:130px;
+   background: linear-gradient(135deg, #b39aee, #44d079);
+    margin: 20px auto;
+    padding: 15px 25px;
+    text-align: center;
+    border-radius: 4%;
+    position: relative;
+    box-shadow: 0 8px 18px rgb(0 0 0 / 80%);
+    color:black;
+    float:left;
+    margin-right:40px;
+} 
+.card2:hover{
+    background: linear-gradient(135deg, #da6faa, #8b69df);
+}
+    
+.card2 h1{
+    color:#000000;
+    margin-top:-5px;
+    margin-bottom: 20px;
+    font-size:24px;
+}
+.card2 img{
+    width:50%;
+        margin-top:-20px;
+        margin-bottom:25px;
+}
+.pressure,.visibility,.max_temp,.min_temp{
+    color:rgb(255 255 255);
+    font-size:25px;
+    font-weight:bolder;
+    
+}
+.smallcard{
+    margin: 20px 60px;
 }
 
 .search {
@@ -122,6 +186,7 @@ h1 {
     display: flex;
     align-items: center;
     text-align: left;
+    margin-bottom: 30px;
 }
 
 .col img {
@@ -143,9 +208,21 @@ h1 {
     color: white;
     font-weight: bold;
 }
+
 /* Media Queries */
 /* Media Queries */
 @media screen and (max-width: 768px) {
+    h1{
+        font-size:35px;
+    }
+    h2{
+        font-size:29px;
+    }
+    body {
+        
+        margin-left: 30px;;
+       
+    }
     .card {
         width: 70%;
     }
@@ -166,6 +243,7 @@ h1 {
     .col {
         flex-direction: column;
         text-align: center;
+    
     }
 
     .search button {
@@ -186,6 +264,18 @@ h1 {
 }
 
 @media screen and (max-width: 576px) {
+    h1{
+        font-size:25px;
+    }
+    h2{
+        font-size:20px;
+    }
+    body {
+        
+        margin-left: 3px;
+        height: 80%;
+       
+    }
     .card {
         width: 90%;
         padding: 15px;
@@ -197,7 +287,7 @@ h1 {
 
     .search input
      {
-        width: 100%;
+        width: 80%;
         margin-right: 0;
     }
     
