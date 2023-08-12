@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>WeatherInfo</title>
+    <title>weather</title>
     <script src="script.js"></script>
 </head>
 
 <body>
     <h1>Welcome to Hdr's Weather_app</h1>
+    <h2>Enter your city name</h2>
     <div class="card">
         <div class="search">
             <input type="text" placeholder="Enter city Name" spellcheck="false">
@@ -39,6 +40,44 @@
             </div>
         </div>
     </div>
+
+    <!-- small card  -->
+
+<div class="smallcard">
+
+    <div class="card2">
+       
+            <h1>Pressure</h1>
+            <img src="images/pressure.png" alt="error" class="weather-icon2">
+             <div class="pressure">__Hg</div>
+        
+    </div>
+
+    <div class="card2">
+       
+        <h1>Visibility</h1>
+        <img src="images/visibility.png" alt="error" class="weather-icon2">
+         <div class="visibility">___</div>
+    
+    </div>
+    <div class="card2">
+       
+        <h1>Max_temp</h1>
+        <img src="images/max_temp.png" alt="error" class="weather-icon2">
+         <div class="max_temp">__°C</div>
+    
+</div>
+<div class="card2">
+       
+    <h1>Min_temp</h1>
+    <img src="images/min_temp.png" alt="error" class="weather-icon2">
+     <div class="min_temp">__°C</div>
+
+</div>
+
+</div>
+
+
 
 </body>
 <!-- API by city : https://api.openweathermap.org/data/2.5/weather?q=Rafiganj&appid=93dc2a3a1352b5da8246c737a59ff6aa&units=metric -->
